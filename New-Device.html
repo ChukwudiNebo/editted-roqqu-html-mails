@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table email</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* Fonts */
+        
+        @font-face {
+            font-family: 'Visby Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Regular'), url('./visby-cufonfonts-webfont/VisbyRegular.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Bold Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Bold Italic'), url('./visby-cufonfonts-webfont/Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Bold';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Visby Bold'), url('./visby-cufonfonts-webfont/VisbyBold.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Extrabold Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Extrabold Italic'), url('./visby-cufonfonts-webfont/VisbyExtrabold Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Extrabold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Extrabold'), url('./visby-cufonfonts-webfont/VisbyExtrabold.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Heavy Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Heavy Italic'), url('./visby-cufonfonts-webfont/VisbyHeavy Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Heavy';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Heavy'), url('./visby-cufonfonts-webfont/VisbyHeavy.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Italic'), url('./visby-cufonfonts-webfont/VisbyItalic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Light Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Light Italic'), url('./visby-cufonfonts-webfont/VisbyLight Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Light';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Light'), url('./visby-cufonfonts-webfont/VisbyLight.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Medium Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Medium Italic'), url('./visby-cufonfonts-webfont/VisbyMedium Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Medium';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Medium'), url('./visby-cufonfonts-webfont/VisbyMedium.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Semibold Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Semibold Italic'), url('./visby-cufonfonts-webfont/VisbySemibold Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Semibold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Semibold'), url('./visby-cufonfonts-webfont/VisbySemibold.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Thin Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Thin Italic'), url('./visby-cufonfonts-webfont/VisbyThin Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Thin';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Thin'), url('./visby-cufonfonts-webfont/VisbyThin.woff') format('woff');
+        }
+        
+        body {
+            font-family: 'Visby Regular';
+            background-color: #F5F8FA;
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        header {
+            padding-top: 24px;
+        }
+        
+        .body-container {
+            background-color: #fff;
+        }
+        
+        .welcome-heading {
+            font-family: "Visby Semibold";
+        }
+        
+        .welcome-body {
+            margin: 2rem;
+        }
+        /* .welcome-heading {
+            font-family: 'TitlingGothicFB Comp Regular';
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+        } */
+        
+        .welcome-text {
+            margin-top: 1rem;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 25px;
+            padding-bottom: 2rem;
+        }
+        
+        .welcome-textTop {
+            margin-bottom: 1rem;
+        }
+        
+        .welcome-text b {
+            font-family: "Visby Semibold";
+        }
+        
+        .footer {
+            padding: 2rem;
+        }
+        
+        .footer-head {
+            font-family: "Visby Semibold";
+        }
+        
+        .logo-left img:first-child {
+            background-color: #071C35;
+            width: 111px;
+            padding: 0.5rem;
+            margin-right: 1rem;
+            border-radius: 4.06px;
+        }
+        
+        .logo-wrapper {
+            width: 100%;
+        }
+        
+        .logo-wrapper img {
+            padding-right: 24px;
+        }
+        
+        .footer-text {
+            margin-top: 1rem;
+            line-height: 26px;
+            font-size: 16px;
+        }
+        /* Media Query  */
+        
+        @media only screen and (max-width: 768px) {
+            .body-wrapper {
+                width: 100vw;
+            }
+            .body-container {
+                width: 100vw;
+            }
+            .welcome-text li {
+                list-style: none;
+                padding-left: 0;
+            }
+            .post-image {
+                display: inline-block;
+                margin-bottom: 4rem;
+            }
+            .post-bottom {
+                padding: 1.5rem;
+            }
+            .table-logo,
+            .logo-left,
+            .logo-right {
+                display: inline-block;
+                margin-bottom: 1.5rem;
+            }
+            .logo-right img {
+                margin-right: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="body-wrapper">
+            <div class="body-container">
+                <!-- Header -->
+                <header>
+                    <img src="https://images2.imgbox.com/69/b7/ptGZ2YGp_o.png" alt="" style="width: 100%;">
+                    <!-- <img src="	https://images2.imgbox.com/d2/c4/z7buvNaX_o.png" alt=""> -->
+                </header>
+                <!-- Welcome -->
+                <div class="welcome-body">
+                    <div class="welcome-heading">
+                        <h2>Login From a New Device or Location?</h2>
+                    </div>
+                    <div class="welcome-text">
+                        <div class="welcome-textTop">
+                            <b>Hi Jaykay,</b>
+                        </div>
+                        <p>You recently attempted to log in to your Roqqu account from a new device or location. Review the login attempt to confirm it was you.</p><br>
+                        <p><b>Where:</b> London United Kingdom IP</p>
+                        <p><b>Address:</b> 188.211.161.200</p>
+                        <p><b>Device:</b> iPhone (iPhone 13 Pro)</p><br>
+                        <p>Don't recognize this activity? <a href="" style="color: #2764FF;">Please reset your password.</a></p>
+                        <br>
+                        <p>If you have any questions or concerns, we're here to help.</p>
+                        <p>Contact us via our <a href="" style="color: #2764FF;">Help Center.</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-head" style="padding-bottom:1rem">
+                    <b>Download our app</b>
+                </div>
+                <div class="footer-logo">
+                    <table class="logo-wrapper">
+                        <tr class="table-logo">
+                            <td class="logo-left">
+                                <a href=""><img src="https://images2.imgbox.com/93/26/rnKVCibj_o.png" alt="Appstore"></a>
+                                <a href=""><img src="https://images2.imgbox.com/27/27/ugWMj9PN_o.png" alt="Playstore"></a>
+                            </td>
+                            <td class="logo-right">
+                                <a href=""><img src="https://images2.imgbox.com/03/74/bxAUtNM1_o.png" alt=""></a>
+                                <!-- <a href=""><img src="https://images2.imgbox.com/67/d0/hz8oi8JM_o.png" alt="facebook"></a> -->
+                                <a href=""><img src="https://images2.imgbox.com/e1/7e/fOZLWNII_o.png" alt="Twitter"></a>
+                                <a href=""><img src="https://images2.imgbox.com/32/24/dJlaroQR_o.png" alt="linkedIn"></a>
+                                <a href=""><img src="https://images2.imgbox.com/4e/1a/4Kx0wNbk_o.png" alt="Instagram"></a>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <br>
+                <div class="footer-text">
+                    <p>Messages from Roqqu, including our Customer Experience team, will always come from help@roqqu.com email address. We will never ask you for account information like your password or answers to security questions.</p><br>
+                    <p>27a Road 11, Ikota Villa Estate, Lekki-Epe Expressway, Lagos</p>
+                    <p>+2348166106863, +2348135718084</p>
+                    <br>
+                    <a href="" style="color: black;">Unsubscribe</a>
+                </div>
+            </div>
+
+        </div>
+    </body>
+
+</body>
+
+</html>

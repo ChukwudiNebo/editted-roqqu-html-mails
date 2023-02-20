@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News-letter</title>
+    <style type="text/css">
+      /* FONT BEGINING */
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-black-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-black-webfont.woff") format("woff");
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-bold-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-bold-webfont.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-light-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-light-webfont.woff") format("woff");
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-med-webfont.woff2") format("woff2"),
+          url("./fonts/titlinggothicfbnor-med-webfont.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-nor-webfont.woff2") format("woff2"),
+          url("./fonts/titlinggothicfbnor-nor-webfont.woff") format("woff");
+        font-weight: 600;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-reg-webfont.woff2") format("woff2"),
+          url("./fonts/titlinggothicfbnor-reg-webfont.woff") format("woff");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-stand-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-stand-webfont.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-thin-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-thin-webfont.woff") format("woff");
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbybold_italic-webfont.woff2") format("woff2"),
+          url("./fonts/visbybold_italic-webfont.woff") format("woff");
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbybold-webfont.woff2") format("woff2"),
+          url("./fonts/visbybold-webfont.woff") format("woff");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyextrabold_italic-webfont.woff2") format("woff2"),
+          url("./fonts/visbyextrabold_italic-webfont.woff") format("woff");
+        font-weight: bolder;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyextrabold-webfont.woff2") format("woff2"),
+          url("./fonts/visbyextrabold-webfont.woff") format("woff");
+        font-weight: bolder;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyheavy_italic-webfont.woff2") format("woff2"),
+          url("./fonts/visbyheavy_italic-webfont.woff") format("woff");
+        font-weight: heavy;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyheavy-webfont.woff2") format("woff2"),
+          url("./fonts/visbyheavy-webfont.woff") format("woff");
+        font-weight: heavy;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyitalic-webfont.woff2") format("woff2"),
+          url("./fonts/visbyitalic-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbylight-webfont.woff2") format("woff2"),
+          url("./fonts/visbylight-webfont.woff") format("woff");
+        font-weight: light;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbymedium-webfont.woff2") format("woff2"),
+          url("./fonts/visbymedium-webfont.woff") format("woff");
+        font-weight: medium;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyregular-webfont.woff2") format("woff2"),
+          url("./fonts/visbyregular-webfont.woff") format("woff");
+        font-weight: regular;
+        font-style: normal;
+      }
+      /* FONT END */
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Lato", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: 'TitlingGothicFB';
+        font-family: 'Visby';
+      }
+
+          .footer-message{
+        max-width: 600px !important;
+    }
+    .footer-socialMedia{
+        padding-top: 0px !important;
+        /* padding-right: 18px; */
+        padding-left: 70px;
+    }
+    .downloadApp{
+        font-size: 18px;
+    }
+
+    .footer-social-flex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top:0px;
+        margin-top: -7px;
+    }
+    </style>
+  </head>
+  <body style="padding-bottom: 60px; color: black; background-color: #f5f8fa">
+    <center style="width: 100%; table-layout: fixed">
+      <table
+        border="0"
+        height="100%"
+        style="
+          width: 701px;
+          background-color: #ffffff;
+          max-width: 100%;
+          border-spacing: 0;
+          font-family: sans-serif;
+          border-top-right-radius: 6px;
+          border-top-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+          color: black;
+          margin-top: 70px;
+        "
+      >
+        <tr>
+          <td>
+            <img
+              src="https://images2.imgbox.com/dd/58/hKOMiH4b_o.png"
+              alt="roqqu banner"
+              style="max-width: 100%; padding-top: 0px; width: 701px !important"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding-left: 7%; padding-top: 25px; padding-bottom: 20px">
+            <img
+              src="https://i.ibb.co/rkX69dJ/Illustration.png"
+              alt="Illustration"
+              width="113"
+              height="106"
+              style="margin-bottom: 0px"
+            />
+            <h4
+              style="
+                font-size: 24px;
+                margin-bottom: 0px;
+                margin-top: 15px;
+                font-weight: 500;
+                font-family: 'TitlingGothicFB';
+              "
+            >
+              Roqqu V2 Newsletter
+            </h4>
+            <p
+              style="
+                font-size: 18px;
+                margin-top: 12px;
+                font-family: 'Visby';
+                font-weight: bolder;
+              "
+            >
+              December 2022
+            </p>
+            <p
+              style="
+                width: 100%;
+                text-align: left;
+                max-width: 540px;
+                color: black;
+                line-height: 24px;
+                font-size: 15px;
+                margin-top: 15px;
+                font-family: 'Visby';
+font-style: normal;
+font-weight: 500;
+              "
+            >
+              Lorem ipsum dolor sit amet consectetur. Mi erat convallis justo
+              faucibus eget suspendisse porta est. Ipsum diam in arcu donec
+              cursus non velit. Vestibulum laoreet lectus ac tellus pellentesque
+              nunc. Mauris quam lectus erat dictum arcu quis purus euismod
+              egestas. Ipsum diam tellus iaculis cras. Non sed vulputate.
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="text-align: center">
+            <img
+              src="https://i.ibb.co/r5J3fwb/Divider.png"
+              alt="Divider"
+              width="90%"
+              height="2"
+            />
+          </td>
+        </tr>
+
+        <!-- what's new  -->
+        <tr>
+          <td
+            style="
+              display: inline-flex;
+              text-align: left;
+              margin-bottom: 0px;
+              padding-left: 7.5%;
+              margin-top: 20px;
+            "
+          >
+            <img
+              src="https://i.ibb.co/KhqGbQv/Section-icon.png"
+              alt="Section-icon"
+              width="38"
+              height="38"
+            />
+            <p
+              style="
+                font-size: 20px;
+                font-weight: bold;
+                padding-left: 10px;
+                padding-top: 4px;
+                font-weight: 500;
+                font-family: 'TitlingGothicFB';
+                margin-top: 0px;
+                margin-bottom: 0px;
+              "
+            >
+              What’s new
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: 7.5%; padding-top: 15px">
+            <p
+              style="
+                width: 100%;
+                text-align: left;
+                max-width: 540px;
+                color: black;
+                line-height: 24px;
+                font-size: 15px;
+                margin-right: 0px;
+                font-family: 'Visby';
+font-style: normal;
+font-weight: 500;
+padding-bottom: 30px;
+              "
+            >
+              Lorem ipsum dolor sit amet consectetur. Eu in et ac elementum at
+              erat curabitur viverra. Diam sit commodo non sit. Pretium senectus
+              sed turpis duis arcu cursus enim tempor. Et libero risus bibendum
+              id sit volutpat orci imperdiet in. Bibendum vitae nec fringilla
+              nisl semper facilisis. rna in egestas metus vel eu purus enim.
+            </p>
+          </td>
+        </tr>
+
+        <!-- Better experience  -->
+
+        <tr>
+          <td style="padding-left: 7%">
+            <table width="100%;border-spacing: 0px;">
+              <tr>
+                <td style="text-align: center; width: 100%">
+                  <table
+                    cellpadding="0"
+                    cellspacing="0"
+                    style="
+                      width: 100%;
+                      max-width: 294px;
+                      text-align: center;
+                      float: left;
+                      border-spacing: 0px;
+                      padding-right: 25px;
+                    "
+                  >
+                    <tr>
+                      <td
+                        style="
+                          padding: 0px 0px;
+                          height: 200px;
+                          max-width: 294px !important;
+                        "
+                      >
+                        <img
+                          src="https://i.ibb.co/pZ1wkNz/Image.png"
+                          alt="Image"
+                          height="200"
+                          width="294"
+                          alt="play store"
+                          style="border: 0px; border-radius: 10px"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                  <table
+                    style="
+                      width: 100%;
+                      text-align: left;
+                      max-width: 305px;
+                      color: black;
+                      float: left;
+                      border-collapse: collapse;
+                      margin-top: 0px;
+                      margin-left: 3px;
+                    "
+                  >
+                    <tr>
+                      <td style="height: 18px; padding: 0px">
+                        <h4
+                          style="
+                            color: #1c2127;
+                            margin-bottom: 2px;
+                            font-size: 16px;
+                            margin-top: 20px;
+                            font-weight: 500;
+                            font-family: 'TitlingGothicFB';
+                            line-height: 24px;
+                          "
+                        >
+                          Better Experience
+                        </h4>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="height: 80px">
+                        <p
+                          style="
+                            color: #555c63;
+                            font-size: 14px;
+                            margin-top: 0px;
+                            line-height: 20px;
+                            width: 278.5px;
+                            font-family: 'Visby';
+                          "
+                        >
+                          Lorem ipsum dolor sit amet consectetur. Ornare vitae
+                          nisi varius at ultricies consectetur tristique at
+                          imperdiet. Tortor integer malesuada lectus fringilla
+                          aliquam.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;display: flex;align-items: center;padding-top: 8px;">
+                            <a href="" style="font-size:14px;text-decoration:none;color:#2764FF;align-self:center;height: 22px;padding-top: 2px;padding-right: 30px;">Learn more</a>
+                            <img src="https://i.ibb.co/b5pFLfV/right.png" alt="right" border="0" style="font-size: 15px;height: 24px;width: 24px;">
+                        </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- New UI -->
+
+        <tr>
+          <td style="padding-left: 7%;padding-top: 25px;">
+            <table width="100%;border-spacing: 0px;">
+              <tr>
+                <td style="text-align: center; width: 100%">
+                  <table
+                    cellpadding="0"
+                    cellspacing="0"
+                    style="
+                      width: 100%;
+                      max-width: 294px;
+                      text-align: center;
+                      float: left;
+                      border-spacing: 0px;
+                      padding-right: 25px;
+                    "
+                  >
+                    <tr>
+                      <td
+                        style="
+                          padding: 0px 0px;
+                          height: 200px;
+                          max-width: 294px !important;
+                        "
+                      >
+                        <img
+                          src="https://i.ibb.co/pPCSqSb/Image-1.png"
+                          alt="Image"
+                          height="200"
+                          width="294"
+                          alt="play store"
+                          style="border: 0px; border-radius: 10px"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                  <table
+                    style="
+                      width: 100%;
+                      text-align: left;
+                      max-width: 305px;
+                      color: black;
+                      float: left;
+                      border-collapse: collapse;
+                      margin-top: 0px;
+                      margin-left: 3px;
+                    "
+                  >
+                    <tr>
+                      <td style="height: 18px; padding: 0px">
+                        <h4
+                          style="
+                            color: #1c2127;
+                            margin-bottom: 2px;
+                            font-size: 16px;
+                            margin-top: 20px;
+                            font-weight: 500;
+                            font-family: 'TitlingGothicFB';
+                            line-height: 24px;
+                          "
+                        >
+                          New UI
+                        </h4>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="height: 80px">
+                        <p
+                          style="
+                            color: #555c63;
+                            font-size: 14px;
+                            margin-top: 0px;
+                            line-height: 20px;
+                            width: 278.5px;
+                            font-family: 'Visby';
+                          "
+                        >
+                          Lorem ipsum dolor sit amet consectetur. Ornare vitae
+                          nisi varius at ultricies consectetur tristique at
+                          imperdiet. Tortor integer malesuada lectus fringilla
+                          aliquam.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;display: flex;align-items: center;padding-top: 8px;">
+                            <a href="" style="font-size:14px;text-decoration:none;color:#2764FF;align-self:center;height: 22px;padding-top: 2px;padding-right: 30px;">Learn more</a>
+                            <img src="https://i.ibb.co/b5pFLfV/right.png" alt="right" border="0" style="font-size: 15px;height: 24px;width: 24px;">
+                        </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding-left: 7%;padding-top: 25px;">
+            <table width="100%;border-spacing: 0px;">
+              <tr>
+                <td style="text-align: center; width: 100%">
+                  <table
+                    cellpadding="0"
+                    cellspacing="0"
+                    style="
+                      width: 100%;
+                      max-width: 294px;
+                      text-align: center;
+                      float: left;
+                      border-spacing: 0px;
+                      padding-right: 25px;
+                    "
+                  >
+                    <tr>
+                      <td
+                        style="
+                          padding: 0px 0px;
+                          height: 200px;
+                          max-width: 294px !important;
+                        "
+                      >
+                        <img
+                          src="https://i.ibb.co/pPCSqSb/Image-1.png"
+                          alt="Image"
+                          height="200"
+                          width="294"
+                          alt="play store"
+                          style="border: 0px; border-radius: 10px"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                  <table
+                    style="
+                      width: 100%;
+                      text-align: left;
+                      max-width: 305px;
+                      color: black;
+                      float: left;
+                      border-collapse: collapse;
+                      margin-top: 0px;
+                      margin-left: 3px;
+                    "
+                  >
+                    <tr>
+                      <td style="height: 18px; padding: 0px">
+                        <h4
+                          style="
+                            color: #1c2127;
+                            margin-bottom: 2px;
+                            font-size: 16px;
+                            margin-top: 20px;
+                            font-weight: 500;
+                            font-family: 'TitlingGothicFB';
+                            line-height: 24px;
+                          "
+                        >
+                          New UI
+                        </h4>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="height: 80px">
+                        <p
+                          style="
+                            color: #555c63;
+                            font-size: 14px;
+                            margin-top: 0px;
+                            line-height: 20px;
+                            width: 278.5px;
+                            font-family: 'Visby';
+                          "
+                        >
+                          Lorem ipsum dolor sit amet consectetur. Ornare vitae
+                          nisi varius at ultricies consectetur tristique at
+                          imperdiet. Tortor integer malesuada lectus fringilla
+                          aliquam.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;display: flex;align-items: center;padding-top: 8px;">
+                            <a href="" style="font-size:14px;text-decoration:none;color:#2764FF;align-self:center;height: 22px;padding-top: 2px;padding-right: 30px;">Learn more</a>
+                            <img src="https://i.ibb.co/b5pFLfV/right.png" alt="right" border="0" style="font-size: 15px;height: 24px;width: 24px;">
+                        </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- divider  -->
+        <tr>
+          <td
+            style="text-align: center; padding-top: 20px; padding-bottom: 20px"
+          >
+            <img
+              src="https://i.ibb.co/r5J3fwb/Divider.png"
+              alt="Divider"
+              width="90%"
+              height="2"
+            />
+          </td>
+        </tr>
+
+        <!-- blog post  -->
+        <tr>
+          <td
+            style="
+              display: inline-flex;
+              text-align: left;
+              margin-bottom: 0px;
+              padding-left: 7.5%;
+              margin-top: 20px;
+            "
+          >
+            <img
+              src="https://i.ibb.co/Ld3Zbs2/Group-6.png"
+              alt="Section-icon"
+              width="25.89"
+              height="32"
+            />
+            <p
+              style="
+                font-size: 20px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                font-weight: bold;
+                padding-left: 10px;
+                padding-top: 4px;
+                font-weight: 500;
+                font-family: 'TitlingGothicFB';
+              "
+            >
+              Blog Posts
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: 7.5%; padding-top: 20px;padding-bottom: 25px;">
+            <p
+              style="
+                width: 100%;
+                text-align: left;
+                max-width: 90%;
+                color: #1c2127e6 !important;
+                line-height: 24px;
+                font-size: 15px;
+                margin-right: 0px;
+                font-family: 'Visby';
+              "
+            >
+              Lorem ipsum dolor sit amet consectetur. Eu in et ac elementum at
+              erat curabitur viverra. Diam sit commodo non sit.
+            </p>
+          </td>
+        </tr>
+
+                    <!-- Volatility and Crypto Volatility -->
+            
+            <tr>
+                    <td width="100%" style="border-spacing: 0px;padding: 0px;">
+                        <tr>
+                            <td style="padding-left: 7.5%;">
+                                <table class="footer-social" style="max-width: 300px;border-spacing: 0;float: left;padding-bottom: 30px;padding-right:25px;">
+                                    <tr>
+                                        <td  style="text-align: left;">
+                                                <img src="https://i.ibb.co/QKLdHBk/img-3.png" alt="img-3" height="100" width="280" style="border: 0px">                                            
+                                        </td>
+                                    </tr>
+                                    <tr style="text-align: left;max-width: 340px;">
+                                        <td>
+                                            <h4 style="color: #1C2127;margin-bottom: 0px;font-size: 18px;max-width: 240px;line-height: 27px;font-weight: 500;font-family: 'TitlingGothicFB';">
+                                                Volatility and Crypto Volatility
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                    <tr style="text-align: left;">
+                                        <td>
+                                            <p style="color: #555C63;font-size: 14px;margin-top: 5px;max-width: 270px;font-family: 'Visby';font-style: normal;font-weight: 500;">
+                                                Lorem ipsum dolor sit amet consectetur. Ornare vitae nisi varius at ultricies consectetur tristique at imperdiet. 
+                                                Tortor integer malesuada lectus fringilla aliquam.
+                                            </p>                                        
+                                        </td>
+                                    </tr>
+                                    <tr>
+                        <td style="text-align: left;display: flex;align-items: center;padding-top: 8px;">
+                            <a href="" style="font-size:14px;text-decoration:none;color:#2764FF;align-self:center;height: 22px;padding-top: 2px;padding-right: 30px;">Learn more</a>
+                            <img src="https://i.ibb.co/b5pFLfV/right.png" alt="right" border="0" style="font-size: 15px;height: 24px;width: 24px;">
+                        </td>
+                    </tr>
+                                </table>
+                                <!--  -->
+                                <!--  -->
+                                <table style="max-width: 324px;float: left;padding-bottom:30px;border-spacing: 0px;">
+                                    <tr>
+                                        <td>
+                                                <img src="https://i.ibb.co/QKLdHBk/img-3.png" alt="img-3" height="100" width="280" style="border: 0px">                                                    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left">
+                                            <h4 style="color: #1C2127;margin-bottom: 0px;font-size: 18px;padding-left: 0px;line-height: 27px;max-width: 240px;font-weight: 500;font-family: 'TitlingGothicFB';">
+                                                Volatility and Crypto Volatility
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left">
+                                            <p style="color: #555C63;font-size: 14px;margin-top: 5px;max-width: 270px;padding-left: 0px;font-family: 'Visby';font-style: normal;font-weight: 500;">
+                                                Lorem ipsum dolor sit amet consectetur. Ornare vitae nisi varius at ultricies consectetur tristique at imperdiet. 
+                                                Tortor integer malesuada lectus fringilla aliquam.
+                                            </p>                                        
+                                        </td>
+                                    </tr>
+                                    <tr>
+                        <td style="text-align: left;display: flex;align-items: center;padding-top: 8px;">
+                            <a href="" style="font-size:14px;text-decoration:none;color:#2764FF;align-self:center;height: 22px;padding-top: 2px;padding-right: 30px;">Learn more</a>
+                            <img src="https://i.ibb.co/b5pFLfV/right.png" alt="right" border="0" style="font-size: 15px;height: 24px;width: 24px;">
+                        </td>
+                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </td>
+            </tr>
+
+            <!-- second table row -->
+            <tr>
+                    <td width="100%" style="border-spacing: 0px;padding: 0px">
+                        <tr>
+                            <td style="padding-left: 7.5%;">
+                                <table class="footer-social" style="max-width: 300px;border-spacing: 0;float: left;padding-bottom: 30px;padding-right:25px;">
+                                    <tr>
+                                        <td  style="text-align: left;">
+                                                <img src="https://i.ibb.co/QKLdHBk/img-3.png" alt="img-3" height="100" width="280" style="border: 0px">                                            
+                                        </td>
+                                    </tr>
+                                    <tr style="text-align: left;max-width: 340px;">
+                                        <td>
+                                            <h4 style="color: #1C2127;margin-bottom: 0px;font-size: 18px;max-width: 240px;line-height: 27px;font-weight: 500;font-family: 'TitlingGothicFB';">
+                                                Volatility and Crypto Volatility
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                    <tr style="text-align: left;">
+                                        <td>
+                                            <p style="color: #555C63;font-size: 14px;margin-top: 5px;max-width: 270px;font-family: 'Visby';font-style: normal;font-weight: 500;">
+                                                Lorem ipsum dolor sit amet consectetur. Ornare vitae nisi varius at ultricies consectetur tristique at imperdiet. 
+                                                Tortor integer malesuada lectus fringilla aliquam.
+                                            </p>                                        
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;display: flex;align-items: center;padding-top: 8px;">
+                                            <a href="" style="font-size:14px;text-decoration:none;color:#2764FF;align-self:center;height: 22px;padding-top: 2px;padding-right: 30px;">Learn more</a>
+                                            <img src="https://i.ibb.co/b5pFLfV/right.png" alt="right" border="0" style="font-size: 15px;height: 24px;width: 24px;">
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table style="max-width: 324px;float: left;padding-bottom: 10px;margin-top: 0px;border-spacing: 0px;">
+                                    <tr>
+                                        <td>
+                                                <img src="https://i.ibb.co/QKLdHBk/img-3.png" alt="img-3" height="100" width="280" style="border: 0px">                                                    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left">
+                                            <h4 style="color: #1C2127;margin-bottom: 0px;font-size: 18px;padding-left: 0px;line-height: 27px;max-width: 240px;font-weight: 500;font-family: 'TitlingGothicFB';">
+                                                Volatility and Crypto Volatility
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left">
+                                            <p style="color: #555C63;font-size: 14px;margin-top: 5px;max-width: 270px;padding-left: 0px;font-family: 'Visby';font-style: normal;font-weight: 500;">
+                                                Lorem ipsum dolor sit amet consectetur. Ornare vitae nisi varius at ultricies consectetur tristique at imperdiet. 
+                                                Tortor integer malesuada lectus fringilla aliquam.
+                                            </p>                                        
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;display: flex;align-items: center;padding-top: 8px;">
+                                            <a href="" style="font-size:14px;text-decoration:none;color:#2764FF;align-self:center;height: 22px;padding-top: 2px;padding-right: 30px;">Learn more</a>
+                                            <img src="https://i.ibb.co/b5pFLfV/right.png" alt="right" border="0" style="font-size: 15px;height: 24px;width: 24px;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </td>
+            </tr>
+
+            <!-- divider  -->
+            <tr>
+                <td style="text-align: center;padding-bottom:0px;">
+                    <img src="https://i.ibb.co/r5J3fwb/Divider.png" alt="Divider" width="90%" height="2">
+                </td>
+            </tr>
+
+          
+
+            <!-- stay inspired -->
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr style="margin-bottom: 0px;">
+                            <td style="display: inline-flex;text-align: center;margin-bottom: 10px;margin-top: 15px;padding-left: 7%;">
+                                <img src="https://i.ibb.co/k0rcQXC/Group-7.png" alt="Group-7"  width="25"  style="height: 25px;">
+                                <p style="font-size:20px;font-weight:bold;padding-left: 10px;font-weight: 500;
+                font-family: 'TitlingGothicFB';margin-top: 0px;margin-bottom: 0px;">
+                                    Stay inspired
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="display:flex;max-width: 90%;;text-align: left;color: black;line-height: 30px;font-size:15px;list-style:none;padding-top:10px;padding-bottom:0px;padding-left: 7.5%;overflow:hidden;">
+                                <span>&#8226;</span>
+                                <p style="padding-left: 10px;margin:0;margin-right: 0px;font-family: 'Visby';font-style: normal;font-weight: 500;">
+                                    Lorem ipsum dolor sit amet consectetur. Mi erat convallis justo faucibus eget suspendisse porta est. Ipsum diam in arcu donec cursus non velit.                                      
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="display:flex;max-width: 90%;;text-align: left;max-width: 600px;color: black;line-height: 30px;font-size:16px;list-style:none;padding-top:0px;padding-bottom:0px;padding-left: 7.5%;">
+                                <span>&#8226;</span>
+                                <p style="padding-left: 10px;margin:0;font-family: 'Visby';font-style: normal;font-weight: 500;">
+                                    Vestibulum laoreet lectus ac tellus pellentesque nunc. 
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="display:flex;width:fit-content;text-align: left;max-width: 600px;color: black;line-height: 30px;font-size:16px;list-style:none;padding-top:0px;padding-bottom:0px;padding-left:7.5%;">    
+                                <span>&#8226;</span>
+                                <p style="padding-left: 10px;margin:0;font-family: 'Visby';font-style: normal;font-weight: 500;">
+                                    Mauris quam lectus erat dictum arcu quis purus euismod egestas.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="display:flex;text-align: left;width:fit-content;color: black;line-height: 30px;font-size:16px;list-style:none;padding-top:0px;padding-bottom:50px;padding-left: 7.5%;">
+                                <span stle="position: relative;top: 30px;">&#8226;</span>
+                                <p style="padding-left: 10px;margin:0;font-family: 'Visby';font-style: normal;font-weight: 500;">
+                                    Ipsum diam tellus iaculis cras. Non sed vulputate.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+                <!-- footer  -->
+
+<table border="0" height="100%" style="height:100%;margin:0 auto;color: black;padding:0;width:100%;max-width: 630px;border-spacing: 0;font-family: sans-serif;background-color: #F5F8FA;">
+
+<tr>
+  <td style="padding-top: 23px">
+      <!-- <td width="100%" style="border-spacing: 0px;"> -->
+          <tr style="margin-bottom: 0px">
+              <td>
+                  <h4 class="downloadApp" style="padding-left: 22px;font-size: 18px;margin-bottom: 15px;">Download our app</h4>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <table class="footer-social" style="max-width: 300px;border-spacing: 0;float: left;margin-right: 6.3%;padding-bottom: 15px;">
+                      <tr>
+                          <td class="link-app" style="border-spacing: 0;padding-left: 20px !important;">
+                              <a href="https://play.google.com/store/apps/details?id=com.roqqu.app" style="text-decoration:none;height: 40px !important;width: 111px;">
+                                  <img src="https://images2.imgbox.com/93/26/rnKVCibj_o.png" alt="group-8" width="105" height="40" style="background-color: #071C35;padding: 0.5rem;margin-right: 1rem;           border-radius: 4.06px;height: 40px !important;width: 111px;" />
+                              </a>
+                              <a href="https://apps.apple.com/us/app/roqqu-buy-and-sell-bitcoin/id1505370687" style="text-decoration:none;height: 40px !important;width: 111px;">
+                                  <img src="https://images2.imgbox.com/27/27/ugWMj9PN_o.png" alt="group-9" width="111" height="40" data-is360="0" style="background-color: #071C35;padding: 0.5rem;border-radius: 4.06px;height: 40px;width: 111px;"/>
+                              </a>
+                          </td>
+                      </tr>
+                  </table>
+                  <table class="footer-socialMedia-01" style="max-width: 324px;float: left;padding-bottom: 15px;">
+                      <tr>
+                          <td class="footer-socialMedia" style="padding-left: 22px;">
+                              <a href="https://facebook.com/roqqupay" style="padding:0px 0px;text-decoration: none;padding-right: 10px">
+                                  <img src="https://i.ibb.co/QkrCcs7/Facebook.png" alt="Facebook" width="40" height="40" data-is360="0">
+                              </a>
+                              <a href="https://twitter.com/roqqupay" style="padding:0px 10px;padding-left: 10px;text-decoration: none;padding-right: 10px">
+                                  <img src="https://i.ibb.co/P4vLzS3/Twitter.png" alt="Twitter" width="42" height="40" data-is360="0">
+                              </a>
+                              <a href="#" style="padding:0px 10px;padding-left: 10px;text-decoration: none;padding-right: 10px">
+                                  <img src="https://i.ibb.co/KF6LhD8/LinkedIn.png" alt="LinkedIn" width="40" height="40" data-is360="0">
+                              </a>
+                              <a href="https://instagram.com/roqqupay" style="padding:0px 10px;padding-left: 10px;text-decoration: none;padding-right: 10px">
+                                  <img src="https://i.ibb.co/YpB3QDJ/Instagram.png" alt="Instagram" width="40" height="40" data-is360="0">
+                              </a>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+
+
+          <tr>
+      <td>
+          <table>
+              <tr>
+                  <td class="footer-message" style="line-height: 24px;font-size: 13px;padding-left: 20px;width: 550px !important;font-family: 'Visby';font-style: normal;font-weight: 500;">
+                      <p>
+                          Messages from Roqqu, including our Customer Experience team, will always come from a help@roqqu.com email address. 
+                          We will never ask you for account information like your password or answers to security questions.
+                      </p>
+                      <p style="padding-top: 20px;padding-bottom: 20px;">
+                          27a Road 11, Ikota Villa Estate, Lekki-Epe Expressway, Lagos
+                      </p>
+                      <a href="#" style="color: black;font-size: 15px;">Unsubscribe</a>
+                  </td>
+              </tr>
+          </table>
+      </td>
+  </tr>
+  <!-- </td> -->
+  </td>
+</tr>
+</table>
+<!--  -->
+<!--  -->
+      </table>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table email</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* Fonts */
+        
+        @font-face {
+            font-family: 'Visby Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Regular'), url('./visby-cufonfonts-webfont/VisbyRegular.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Bold Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Bold Italic'), url('./visby-cufonfonts-webfont/Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Bold';
+            font-style: normal;
+            font-weight: 500;
+            src: local('Visby Bold'), url('./visby-cufonfonts-webfont/VisbyBold.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Extrabold Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Extrabold Italic'), url('./visby-cufonfonts-webfont/VisbyExtrabold Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Extrabold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Extrabold'), url('./visby-cufonfonts-webfont/VisbyExtrabold.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Heavy Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Heavy Italic'), url('./visby-cufonfonts-webfont/VisbyHeavy Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Heavy';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Heavy'), url('./visby-cufonfonts-webfont/VisbyHeavy.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Italic'), url('./visby-cufonfonts-webfont/VisbyItalic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Light Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Light Italic'), url('./visby-cufonfonts-webfont/VisbyLight Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Light';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Light'), url('./visby-cufonfonts-webfont/VisbyLight.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Medium Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Medium Italic'), url('./visby-cufonfonts-webfont/VisbyMedium Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Medium';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Medium'), url('./visby-cufonfonts-webfont/VisbyMedium.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Semibold Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Semibold Italic'), url('./visby-cufonfonts-webfont/VisbySemibold Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Semibold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Semibold'), url('./visby-cufonfonts-webfont/VisbySemibold.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Thin Italic';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Thin Italic'), url('./visby-cufonfonts-webfont/VisbyThin Italic.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Visby Thin';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Visby Thin'), url('./visby-cufonfonts-webfont/VisbyThin.woff') format('woff');
+        }
+        
+        body {
+            font-family: 'Visby Regular';
+            background-color: #F5F8FA;
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .body-container {
+            background-color: #fff;
+        }
+        
+        header {
+            margin-top: 24px;
+        }
+        
+        .welcome-heading {
+            font-family: "Visby Semibold";
+        }
+        
+        .welcome-body {
+            margin: 2rem;
+        }
+        
+        .welcome-text {
+            margin-top: 1rem;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+        
+        .welcome-text li {
+            padding-left: 1rem;
+        }
+        
+        .welcome-textTop {
+            font-family: "Visby Semibold";
+            margin-bottom: 1rem;
+        }
+        
+        .post-heading h3 {
+            font-family: "Visby Semibold";
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .post-body {
+            margin: 0 auto;
+            padding-top: 3rem;
+        }
+        
+        .post-item td:first-child {
+            padding-right: 2rem;
+        }
+        
+        td .post-image img {
+            margin: 0!important;
+        }
+        
+        .post-image {
+            width: 287px;
+            height: 112px;
+        }
+        
+        hr {
+            margin: 0 8rem;
+            opacity: 0.3;
+        }
+        
+        .post-text {
+            margin-bottom: 2rem;
+            line-height: 27px;
+            width: 222px;
+            font-size: 18px;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        .post-text a {
+            font-family: "Visby Semibold";
+            text-decoration: none;
+            color: black;
+        }
+        
+        .post-bottom {
+            padding: 2rem;
+            line-height: 27px;
+        }
+        
+        .footer {
+            padding: 2rem;
+        }
+        
+        .footer-head {
+            font-family: "Visby Semibold";
+        }
+        
+        .logo-left img:first-child {
+            background-color: #071C35;
+            width: 111px;
+            padding: 0.5rem;
+            margin-right: 1rem;
+            border-radius: 4.06px;
+        }
+        
+        .logo-wrapper {
+            width: 100%;
+        }
+        
+        .logo-wrapper img {
+            padding-right:20px;
+        }
+        
+        .footer-text {
+            margin-top: 1rem;
+            line-height: 26px;
+        }
+
+        .footer-icons img {
+            height: 40px;
+            width: 40px;
+        }
+        /* Media Query  */
+        
+        @media only screen and (max-width: 768px) {
+            .body-wrapper {
+                width: 100vw;
+            }
+            .body-container {
+                width: 100vw;
+            }
+            .welcome-text li {
+                list-style: none;
+                padding-left: 0;
+            }
+            header img {
+                width: 100vw;
+            }
+            hr {
+                margin: 0 5rem;
+                opacity: 0.2;
+            }
+            .post-body {
+                width: 100%;
+                padding: 3rem;
+                /* margin: auto; */
+            }
+            .post-item td:first-child {
+                padding-right: 0;
+            }
+            /* .post-item {
+                width: 287px;
+            } */
+            .active {
+                display: none !important;
+            }
+            .post-image {
+                display: inline-block;
+                margin-bottom: 4rem;
+            }
+            .post-bottom {
+                padding: 1.5rem;
+            }
+            .table-logo,
+            .logo-left,
+            .logo-right {
+                display: inline-block;
+                margin-bottom: 1.5rem;
+            }
+            .logo-right img {
+                margin-right: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="body-wrapper">
+            <div class="body-container">
+                <!-- Header -->
+                <header>
+                    <img src="https://images2.imgbox.com/31/17/ACHHIrf7_o.png" alt="" style="width: 100%;">
+                    <!-- <img src="https://images2.imgbox.com/2d/56/7jyt3ubo_o.png" alt=""> -->
+                </header>
+                <!-- Welcome -->
+                <div class="welcome-body">
+                    <div class="welcome-heading">
+                        <h2>Welcome to Roqqu</h2>
+                    </div>
+                    <div class="welcome-text">
+                        <div class="welcome-textTop">
+                            <b>Hi Jaykay, Great to have you here!</b>
+                        </div>
+                        <p>Congratulations on choosing Roqqu as your go to finance app for all things crypto. With your support, you're helping us build the future of personal finance. As you get started, I wanted to let you know that at Roqqu we:</p><br>
+                        <li>take your privacy very seriously</li>
+                        <li>have free chat support</li>
+                        <li>work only to deliver the best experience you can have</li> <br>
+                        <p> We'll be sending weekly newsletters that cover a range of topics and are designed to highlight the best of or content. From news and features through to in-depth condition infornation we've got you covered.</p><br>
+                        <p>Kindly</p>
+                        <p>The Roqqu Team</p>
+                    </div>
+                </div>
+                <!-- Posts for you -->
+                <div class="post">
+                    <div class="post-heading">
+                        <hr>
+                        <h3>Top posts for you</h3>
+                        <hr>
+                    </div>
+                    <table class="post-body">
+
+                        <tr class="post-item">
+                            <td class="post-image">
+                                <img src="https://images2.imgbox.com/d9/7e/Si3cZKco_o.png" alt="">
+                                <div class="post-text">
+                                    <a href=""><b>Volatility and crypto Volatility</b></a>
+                                </div>
+                            </td>
+                            <td class="post-image">
+                                <img src="https://images2.imgbox.com/d9/7e/Si3cZKco_o.png" alt="">
+                                <div class="post-text">
+                                    <a href=""><b>Volatility and crypto Volatility</b></a>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr class="post-item">
+                            <td class="post-image">
+                                <img src="https://images2.imgbox.com/d9/7e/Si3cZKco_o.png" alt="">
+                                <div class="post-text">
+                                    <a href=""><b>Volatility and crypto Volatility</b></a>
+                                </div>
+                            </td>
+                            <td class="post-image active">
+                                <img src="https://images2.imgbox.com/d9/7e/Si3cZKco_o.png" alt="">
+                                <div class="post-text">
+                                    <a href=""><b>Volatility and crypto Volatility</b></a>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <div class="post-bottom">
+                        <p>If you are looking for tutorials or guides on how to use Roqqu, our helpdesk is a great place to start. We've also prepared a guide for you <a href="/" style="color: #2764FF;text-decoration: none;">here</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-head" style="padding-bottom:1rem">
+                    <b>Download our app</b>
+                </div>
+                <div class="footer-logo">
+                    <table class="logo-wrapper">
+                        <tr class="table-logo">
+                            <td class="logo-left">
+                                <a href=""><img src="https://images2.imgbox.com/93/26/rnKVCibj_o.png" alt="Appstore"></a>
+                                <a href=""><img src="https://images2.imgbox.com/27/27/ugWMj9PN_o.png" alt="Playstore"></a>
+                            </td>
+                            
+                            <td class="footer-icons">
+
+                                    <img src="https://images2.imgbox.com/99/ce/tzUCTvO9_o.png" alt="" id="footer-layer" />
+
+
+
+                                    <img src="	https://images2.imgbox.com/7c/a6/Uy6cpPDG_o.png" alt="" id="footer-twitter" />
+
+
+
+                                    <img src="	https://images2.imgbox.com/77/ee/jnNVniLj_o.png" alt="" id="footer-linkedin" />
+
+
+                                    <img src="https://images2.imgbox.com/5e/82/lYHovtwA_o.png" alt="" id="footer-instagram" />
+                                </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <br>
+                <div class="footer-text">
+                    <p>Messages from Roqqu, including our Customer Experience team, will always come from help@roqqu.com email address. We will never ask you for account information like your password or answers to security questions.</p><br>
+                    <p>27a Road 11, Ikota Villa Estate, Lekki-Epe Expressway, Lagos</p>
+                    <p>+2348166106863, +2348135718084</p>
+                    <br>
+                    <a href="" style="color: black;">Unsubscribe</a>
+                </div>
+            </div>
+
+        </div>
+    </body>
+
+</body>
+
+</html>

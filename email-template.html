@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style type="text/css">
+      /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'); */
+      /* @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans:wght@300&family=Sawarabi+Gothic&display=swap') */
+      /* @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap'); */
+      /* @import url(//db.onlinewebfonts.com/c/1cb03f4dd029377516fa31f02556f0d5?family=TitlingGothicFB+Comp+Regular); */
+      /* FONT BEGINING */
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-black-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-black-webfont.woff") format("woff");
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-bold-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-bold-webfont.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-light-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-light-webfont.woff") format("woff");
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-med-webfont.woff2") format("woff2"),
+          url("./fonts/titlinggothicfbnor-med-webfont.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-reg-webfont.woff2") format("woff2"),
+          url("./fonts/titlinggothicfbnor-reg-webfont.woff") format("woff");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-stand-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-stand-webfont.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "titlinggothicfb";
+        src: url("./fonts/titlinggothicfbnor-thin-webfont.woff2")
+            format("woff2"),
+          url("./fonts/titlinggothicfbnor-thin-webfont.woff") format("woff");
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbybold_italic-webfont.woff2") format("woff2"),
+          url("./fonts/visbybold_italic-webfont.woff") format("woff");
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbybold-webfont.woff2") format("woff2"),
+          url("./fonts/visbybold-webfont.woff") format("woff");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyextrabold_italic-webfont.woff2") format("woff2"),
+          url("./fonts/visbyextrabold_italic-webfont.woff") format("woff");
+        font-weight: bolder;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyextrabold-webfont.woff2") format("woff2"),
+          url("./fonts/visbyextrabold-webfont.woff") format("woff");
+        font-weight: bolder;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyheavy_italic-webfont.woff2") format("woff2"),
+          url("./fonts/visbyheavy_italic-webfont.woff") format("woff");
+        font-weight: heavy;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyheavy-webfont.woff2") format("woff2"),
+          url("./fonts/visbyheavy-webfont.woff") format("woff");
+        font-weight: heavy;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyitalic-webfont.woff2") format("woff2"),
+          url("./fonts/visbyitalic-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbylight-webfont.woff2") format("woff2"),
+          url("./fonts/visbylight-webfont.woff") format("woff");
+        font-weight: light;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbymedium-webfont.woff2") format("woff2"),
+          url("./fonts/visbymedium-webfont.woff") format("woff");
+        font-weight: medium;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Visby";
+        src: url("./fonts/visbyregular-webfont.woff2") format("woff2"),
+          url("./fonts/visbyregular-webfont.woff") format("woff");
+        font-weight: regular;
+        font-style: normal;
+      }
+      /* FONT END */
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      table {
+        border-spacing: 0;
+      }
+
+      td {
+        padding: 0;
+      }
+
+      img {
+        border: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        background-color: #f5f8fa;
+        padding-bottom: 60px;
+        padding-top: 57px;
+      }
+
+      .main {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 701px;
+        border-spacing: 0;
+        font-family: "Lato", "Trebuchet MS", "Lucida Sans Unicode",
+          "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        color: #4a4a4a;
+      }
+
+      .first-section {
+        background-color: #ffffff;
+        padding: 5% 7%;
+        font-family: "Visby";
+        font-weight: 500;
+        color: #1c2127;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .first-section h1 {
+        font-weight: 500;
+        /* font-family: 'Dela Gothic One', cursive; */
+        /* font-family: "TitlingGothicFB Comp Regular"; */
+        font-family: "TitlingGothicFB";
+        /* font-family: 'League Gothic', sans-serif; */
+        color: #1c2127;
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .first-section h1,
+      .first-section h2 {
+        margin-bottom: 16px;
+      }
+
+      .first-section p {
+        font-family: "Visby";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      .first-section .code {
+        box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+          0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+        border-radius: 1rem;
+        width: 156px;
+        padding: 15px 0;
+        background: #f5f8fa;
+        text-align: center;
+        font-weight: 500;
+        font-size: 40px;
+        font-family: "Lato", "Trebuchet MS", "Lucida Sans Unicode",
+          "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        font-family: "visby";
+        color: #2764ff;
+        margin-top: 24px;
+      }
+
+      .download-app {
+        padding: 24px 7%;
+        font-family: "Visby";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #1c2127;
+      }
+
+      .double-column {
+        padding-top: 20px;
+      }
+
+      .double-column div {
+        width: 290px;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .footer-icons img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .footer-icons a {
+        margin: 0 0.5rem;
+        height: 40px !important;
+        width: 40px !important;
+      }
+
+      .footer {
+        padding: 0 7%;
+      }
+
+      .footer p {
+        margin-bottom: 32px;
+        line-height: 26px;
+        font-family: "Visby";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      .unsubscribe {
+        color: black;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center class="wrapper">
+      <table class="main">
+        <!-- HEADER -->
+        <tr class="first-section">
+          <td>
+            <img
+              src="https://images2.imgbox.com/dd/58/hKOMiH4b_o.png"
+              alt="roqqu banner"
+              width="701"
+              style="max-width: 100%"
+            />
+          </td>
+        </tr>
+
+        <!-- FIRST SECTION -->
+        <tr>
+          <td class="first-section">
+            <h1 style="font-size: 32px">Your sign-in code</h1>
+            <h2 style="font-size: 18px">Hi JayKay,</h2>
+            <p style="font-size: 16px">
+              Please copy and paste the 5-digit code below into the number
+              fields of your sign-in process.
+            </p>
+            <p class="code">12345</p>
+          </td>
+        </tr>
+
+        <!-- DOWNLOAD APP -->
+        <tr>
+          <td class="download-app">
+            <p style="font-weight: bold; font-size: 18px">Download our app</p>
+
+            <table width="100%">
+              <tr>
+                <td class="double-column">
+                  <div style="margin-bottom: 1rem">
+                    <a
+                      href="https://apps.apple.com/ng/app/roqqu-buy-and-sell-bitcoin/id1505370687"
+                      class=""
+                    >
+                      <img
+                        src="https://images2.imgbox.com/93/26/rnKVCibj_o.png"
+                        alt="app store"
+                        class="app-store"
+                        style="
+                          background-color: #071c35;
+                          padding: 0.5rem;
+                          border-radius: 4.06px;
+                          margin-right: 1rem;
+                          width: 111px;
+                        "
+                      />
+                    </a>
+
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.roqqu.app"
+                    >
+                      <img
+                        src="https://images2.imgbox.com/27/27/ugWMj9PN_o.png"
+                        alt="play store"
+                        class="google-play"
+                        style="
+                          background-color: #071c35;
+                          padding: 0.5rem;
+                          border-radius: 4.06px;
+                          margin-right: 2.7rem;
+                          width: 111px;
+                        "
+                      />
+                    </a>
+                  </div>
+
+                  <div class="footer-icons">
+                    <a
+                      href="https://facebook.com/roqqupay"
+                      style="text-decoration: none;margin-left:0px"
+                    >
+                      <img
+                        src="https://i.ibb.co/QkrCcs7/Facebook.png"
+                        alt="Facebook"
+                        width="40"
+                        height="40"
+                        data-is360="0"
+                      />
+                    </a>
+                    <a
+                      href="https://twitter.com/roqqupay"
+                      style="text-decoration: none"
+                    >
+                      <img
+                        src="https://i.ibb.co/P4vLzS3/Twitter.png"
+                        alt="Twitter"
+                        width="40"
+                        height="40"
+                        data-is360="0"
+                      />
+                    </a>
+                    <a href="#" style="text-decoration: none;margin-left: 6px;">
+                      <img
+                        src="https://i.ibb.co/KF6LhD8/LinkedIn.png"
+                        alt="LinkedIn"
+                        width="40"
+                        height="40"
+                        data-is360="0"
+                      />
+                    </a>
+                    <a
+                      href="https://instagram.com/roqqupay"
+                      style="text-decoration: none"
+                    >
+                      <img
+                        src="https://i.ibb.co/YpB3QDJ/Instagram.png"
+                        alt="Instagram"
+                        width="40"
+                        height="40"
+                        data-is360="0"
+                      />
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <!-- FOOTER -->
+        </tr>
+
+        <tr>
+          <td class="footer">
+            <p class="roqqu-message">
+              Messages from Roqqu, including our Customer Experience team, will
+              always come from a help@roqqu.com email address. We will never ask
+              you for account information like your password or answers to
+              security questions
+            </p>
+
+            <!-- <p class="roqqu-address"> hello@roqqu.com </p> -->
+            <!-- <p><a href="mailto:email@example.com" class="roqqu-address ">hello@roqqu.com</a></p> -->
+            <p>
+              <a href="#unsuscribe-link" class="unsubscribe"> Unsubscribe </a>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
